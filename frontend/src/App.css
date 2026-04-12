@@ -1,0 +1,152 @@
+/* --- Global Keyframes --- */
+@keyframes driftDustCloud { 
+  0% { transform: scale(1) rotate(0deg); } 
+  50% { transform: scale(1.02) rotate(1deg); } 
+  100% { transform: scale(1) rotate(0deg); } 
+}
+
+@keyframes pulseText { 
+  0% { opacity: 0.5; } 
+  50% { opacity: 1; } 
+  100% { opacity: 0.5; } 
+}
+
+/* --- Branding & Text --- */
+.metallic-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 34px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(to bottom, #FEEFAA 0%, #D4AF37 50%, #B88A30 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 2px rgba(150, 115, 38, 0.5));
+}
+/* --- Header Elements --- */
+.header-auth-btn { 
+  padding: 8px 24px; 
+  border-radius: 30px; 
+  font-size: 12px; 
+  border: 1.5px solid #E2C255; 
+  color: #E2C255; 
+  background: rgba(226, 194, 85, 0.05); 
+  cursor: pointer; 
+  display: flex; 
+  align-items: center; 
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+/* --- Form Inputs --- */
+.cyber-input {
+  width: 100%;
+  padding: 16px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(226, 194, 85, 0.4);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.cyber-input::placeholder { color: rgba(255, 255, 255, 0.3); }
+
+.cyber-input:focus {
+  border-color: #E2C255;
+  box-shadow: 0 0 5px rgba(150, 115, 38, 0.4);
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* --- Action Buttons --- */
+.cyber-btn {
+  width: 100%;
+  padding: 16px;
+  /* Exact matte gold gradient from the reference image */
+  background: var(--metal-gradient);
+  border: none;
+  border-radius: 8px;
+  color: rgb(226, 194, 85);
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(226, 194, 85, 0.5);
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+
+.cyber-btn:hover {
+  box-shadow: 0 2px 4px rgba(150, 115, 38, 0.4);
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.nav-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.tagline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.2em; /* Wide spacing seen in image_24262b */
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .tagline {
+    font-size: 10px !important;
+    padding: 0 15px;
+    top: 75px !important;
+  }
+  .login-text { display: none !important; }
+}
+
+/* --- Global Matte Gold Scrollbar --- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030406; /* Match game background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #FEEFAA 0%, #D4AF37 50%, #B88A30 100%);
+  border-radius: 5px;
+  border: 2px solid #030406;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E2C255;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #D4AF37 #030406;
+}
+
+/* --- Fixed Header Background --- */
+/* This ensures that when the form scrolls up, it goes BEHIND the header area */
+.header-wrapper-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  /* Solid background prevents form text from showing through the header */
+  background-color: #030406; 
+  padding-bottom: 10px;
+}
