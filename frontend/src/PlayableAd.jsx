@@ -318,7 +318,7 @@ const PlayableAd = () => {
   const finishTrial = (route) => {
     localStorage.setItem('has_played_trial', 'true');
     // Directing them straight to the registration page to capture the user
-    if (route === 'web') navigate('/register');
+    if (route === 'web') navigate('/selection');
     if (route === 'app') window.open('https://play.google.com/store', '_blank'); 
   };
 

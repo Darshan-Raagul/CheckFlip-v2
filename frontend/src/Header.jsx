@@ -185,27 +185,27 @@ const Header = ({ variant = 'landing' }) => {
                         {variant === 'profile' ? (
                             <>
                                 <div style={{ display: 'flex', gap: 'clamp(1rem, 3vw, 1.5rem)' }}>
-                                    <a href="#" onClick={handleHomeClick} className="nav-icon-link">
+                                    {/* <a href="#" onClick={handleHomeClick} className="nav-icon-link">
                                         <Home size="1.2rem" />
                                         <span className="nav-text-label">HOME</span>
-                                    </a>
+                                    </a> */}
                                     <a href="#" className="nav-icon-link">
                                         <BookOpen size="1.2rem" />
                                         <span className="nav-text-label">GUIDE</span>
                                     </a>
                                 </div>
 
-                                <a href="profile" onClick={(e) => { e.preventDefault(); navigate('/profile'); }} className="nav-icon-link">
+                                {/* <a href="profile" onClick={(e) => { e.preventDefault(); navigate('/profile'); }} className="nav-icon-link">
                                     <User size="1.2rem" />
                                     <span className="nav-text-label">PROFILE</span>
-                                </a>
+                                </a> */}
                             </>
                         ) : (
                             <div style={{ display: 'flex', gap: 'clamp(1rem, 3vw, 1.5rem)' }}>
-                                <a href="#" onClick={handleHomeClick} className="nav-icon-link">
+                                {/* <a href="#" onClick={handleHomeClick} className="nav-icon-link">
                                     <Home size="1.2rem" />
                                     <span className="nav-text-label">HOME</span>
-                                </a>
+                                </a> */}
                                 <a href="#" className="nav-icon-link">
                                     <BookOpen size="1.2rem" />
                                     <span className="nav-text-label">GUIDE</span>
