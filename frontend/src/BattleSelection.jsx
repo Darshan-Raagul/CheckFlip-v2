@@ -31,23 +31,13 @@ const BattleSelection = () => {
   }, []);
 
   // --- SMART NAVIGATION LOGIC ---
-  const handleModeSelection = (mode) => {
-      if (!isLoggedIn) {
-          // Not logged in? Send to login page, but secretly pass the destination!
-          const destination = mode === 'local' 
-              ? { pathname: '/game-arena', state: { gameMode: 'local', firstTurn: 'red' } }
-              : { pathname: '/online-match-setup' };
-              
-          navigate('/login', { state: { redirectTo: destination } });
-      } else {
-          // Already logged in? Go straight to the game!
-          if (mode === 'local') {
-              navigate('/game-arena', { state: { gameMode: 'local', firstTurn: 'red' } });
-          } else if (mode === 'online') {
-              navigate('/online-match-setup');
-          }
-      }
-  };
+const handleModeSelection = (mode) => {
+  if (mode === 'local') {
+    navigate('/game-arena', { state: { gameMode: 'local', firstTurn: 'red' } });
+  } else if (mode === 'online') {
+    navigate('/online-match-setup');
+  }
+};
 
   return (
     <GameLayout phase={phase}>
