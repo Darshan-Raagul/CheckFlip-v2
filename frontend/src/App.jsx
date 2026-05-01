@@ -1,7 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import CheckFlipLogin from './CheckFlipLogin';
-import CheckFlipRegister from './CheckFlipRegister';
-import CheckFlipForgot from './CheckFlipForgot';
+
 import BattleSelection from './BattleSelection';
 import GameLobby from './GameLobby';
 import OnlineMatchSetup from './OnlineMatchSetup';
@@ -19,9 +17,7 @@ function App() {
       <Routes>
         {/* Authentication Flow */}
         <Route path="/" element={<GameLobby/>} />
-        <Route path="/login" element={<CheckFlipLogin />} />
-        <Route path="/register" element={<CheckFlipRegister />} />
-        <Route path="/forgot-password" element={<CheckFlipForgot />} />
+
         
         {/* Game Selection */}
         <Route path="/selection" element={<BattleSelection />} />
