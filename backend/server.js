@@ -11,7 +11,8 @@ const io = new Server(server, {
   cors: {
     origin: [
       "http://localhost:5173",
-      "https://check-flip-v2.vercel.app"
+      "https://check-flip-v2.vercel.app",
+      "https://www.checkflip.in"
     ],
     methods: ["GET", "POST"],
     credentials: true
